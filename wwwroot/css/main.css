@@ -1,0 +1,45 @@
+﻿body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: rgb(240,240,240);
+	font-size: 14px;
+	margin: 0px;
+}
+
+label {
+	font-size: 20px;
+	width: 150px;
+	display:inline-block;
+}
+
+input[type=text] {
+	width: 24px;
+	border-radius: 5px;
+	text-align: center;
+}
+input[type=range] {
+	width: 300px;
+}
+
+.temple {
+	border-radius: 50px;
+	margin: 15px;
+}
+
+div {
+	margin: 25px;
+}
+
+.mainDiv {
+	display: flex;
+	
+}
+
+.leftDiv {
+	display: flex;
+	flex-direction: column;
+}
+
+.rightDiv {
+	display: flex;
+	flex-direction: column;
+}
