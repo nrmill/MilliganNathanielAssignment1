@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width" />
+
+    <title>@ViewBag.Title</title>
+    <link href="~/css/main.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/jpg" href="~/img/cropped-favicon.png" />
+</head>
+<body>
+    <header>
+        <!--Top Banner--><div style="height: 110px; top: 0px; right: 0px; left: 0px; padding: 0px; margin: 0px; background-color: #1c314e"></div>
+        <!--Sub-Banner--><div style="height: 6px; top: 110px; right: 0px; left: 0px; padding: 0px; margin: 0px; background-color: #46a2de;"></div>
+        <!--MSB Logo, directs to MSB website--><div style="top: 15px; left: 5%; right: 0px; position: absolute; padding: 0px; margin: 0px; cursor: pointer;"> <img src="https://marriottschool.byu.edu/infosys/wp-content/themes/msm_template/img/msb_logo_primary_left_white.svg" alt="BYU_Logo" onclick="window.location.href = 'https://marriottschool.byu.edu/'" width="175px"></div>
+        <!--IS Text, directs to MSB IS website--><div style="top: 55px; left: 5%; right: 0px; position: absolute;  padding: 0px; margin: 0px; cursor: pointer; color: white; font-size: 25pt;" onclick="window.location.href = 'https://marriottschool.byu.edu/infosys'">Information Systems</div>
+        <menu>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index" >Home</a></li>
+                <li><a asp-controller="Home" asp-action="Calculator" >Calculator</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        Yeehaw Incorporated
+    </footer>
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>

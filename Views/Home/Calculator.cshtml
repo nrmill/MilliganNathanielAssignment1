@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Grade Calculator";
+}
+
+@model CalculationModel
+
+<div class="mainDiv">
+    <div class="leftDiv">
+        <h1>Grade Calculator</h1>
+        <form method="post">
+            <label>Assignments:</label>
+            <input type="range" asp-for="assignments" min="-100" max="100" step="1" onchange="updateAssignments(this.value);">
+            <input type="text" id="assignmentsShow" value="" disabled>%
+            (this value can be below 0 to test proper validation)
+            <br />
+            <label>Group Projects:</label>
+            <input type="range" asp-for="projects" min="0" max="100" step="1" onchange="updateProjects(this.value);">
+            <input type="text" id="projectsShow" value="" disabled>%
+            <br />
+            <label>Quizzes:</label>
+            <input type="range" asp-for="quizzes" min="0" max="100" step="1" onchange="updateQuizzes(this.value);">
+            <input type="text" id="quizzesShow" value="" disabled>%
+            <br />
+            <label>Exams:</label>
+            <input type="range" asp-for="exams" min="0" max="100" step="1" onchange="updateExams(this.value);">
+            <input type="text" id="examsShow" value="" disabled>%
+            <br />
+            <label>INTEX:</label>
+            <input type="range" asp-for="intex" min="0" max="100" step="1" onchange="updateINTEX(this.value);">
+            <input type="text" id="intexShow" value="" disabled>%
+            <br />
+            <br />
+            <input type="submit" value="Calculate Grade" id="submitButton" />
+            <div asp-validation-summary="All"></div>
+        </form>
+
+        @*
+        <p>Score: </p>
+        <span id="output"></span>
+        <br />
+        *@
+        <img src="~/img/Capture.PNG" />
+    </div>
+</div>
